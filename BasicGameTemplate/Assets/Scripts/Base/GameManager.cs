@@ -39,7 +39,7 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
-    private void Start()
+    private void Awake()
     {
         LoadData();
     }
@@ -63,7 +63,7 @@ public class GameManager : Singleton<GameManager>
 
     void LoadData()
     {
-        PlayerMoney = PlayerPrefs.GetFloat("PlayerMoney", 0);
+        playerMoney = PlayerPrefs.GetFloat("PlayerMoney", 0);
     }
 
     void SaveData()

@@ -70,10 +70,17 @@ public class UIController : MonoBehaviour
     void SetMoneyText()
     {
         if (coin.activeSelf)
+        {
+            coin.transform.DORewind();
             coin.transform.DOPunchScale(Vector3.one, 0.5f, 2, 1);
+        }
+
 
         if (money.activeSelf)
+        {
+            money.transform.DORewind();
             money.transform.DOPunchScale(Vector3.one, 0.5f, 2, 1);
+        }
 
         int moneyDigit = GameManager.Instance.PlayerMoney.ToString().Length;
         int value = (moneyDigit - 1) / 3;
